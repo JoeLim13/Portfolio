@@ -1,0 +1,89 @@
+.exp-container{
+	position: absolute;
+	top: 70%;
+	left: 50%;
+	width: 70%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	z-index: 1;
+	// @media (min-width: 375px) {
+	// 	position: absolute;
+	// 	top: 220%;
+	// 	left: 80%;
+	// 	width: 375px;
+	// 	transform: translate(-50%, -50%);
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	flex-wrap: wrap;
+	// 	z-index: 1;
+	// }
+	// @media (min-width: 768px) {
+	// 	position: absolute;
+	// 	top: 130%;
+	// 	left: 50%;
+	// 	width: 768px;
+	// 	transform: translate(-50%, -50%);
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	flex-wrap: wrap;
+	// 	z-index: 1;
+	// }
+	// @media (min-width: 1024px) {
+	// 	width: 1024px;
+	// } 
+	// @media (min-width: 1440px) {
+	// 	position: absolute;
+	// 	top: 70%;
+	// 	left: 50%;
+	// 	width: 1440px;
+	// 	transform: translate(-50%, -50%);
+	// 	display: flex;
+	// 	justify-content: center;
+	// 	flex-wrap: wrap;
+	// 	z-index: 1;
+	// } 
+	.circle-box {
+		position: relative;
+		text-align: center;
+		width: 600px;
+		padding: 30px;
+		margin: 30px;
+		background: #fff;
+		box-sizing: border-box;
+		border-radius: 10px;
+		box-shadow: 0 15px 50px rgba(0,0,0,.2);
+		.circle1, .circle2, .circle3, .circle4 {
+			width: 250px;
+			height: 250px;
+			background: url(../images/train.jpg);
+			border-radius: 50%;
+			float: left;
+			shape-outside: circle();
+			margin: 60px 30px 30px 0;
+		}
+		.circle2 {
+			background: url(../images/workandtravel.jpg);
+		}
+		.circle3 {
+			background: url(../images/uon.jpg);
+		}
+		.circle4 {
+			background: url(../images/aerospace.webp);
+		}
+		h2 {
+			margin: 0;
+			padding: 0;
+			text-align: justify;
+			line-height: 20px;
+			font-size: 15px;
+			font-weight: 600;
+		}
+		h1 {
+			margin: 0 0 20px;
+			padding: 0;
+			font-size: 30px;
+		}
+	}
+}
