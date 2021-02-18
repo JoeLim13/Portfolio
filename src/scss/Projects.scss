@@ -105,7 +105,7 @@
 	background-color: white;
 	transform-origin: right;
 	transition: .7s ease-in-out;
-	transition-delay: .9s;
+	transition-delay: .4s;
 }
 .img-container .img-box .text span:nth-child(4){
 	position: absolute;
@@ -116,7 +116,7 @@
 	background-color: white;
 	transform-origin: left;
 	transition: .7s ease-in-out;
-	transition-delay: .1.3s;
+	transition-delay: .0.9s;
 }
 .img-container .img-box:hover .text span:nth-child(1),
 .img-container .img-box:hover .text span:nth-child(3){
@@ -141,7 +141,7 @@
 	transform: translateY(0);
 	opacity: 1;
 	color: white;
-	transition-delay: 1.6s;
+	transition-delay: 1.2s;
 }
 .img-container .img-box .text p{
 	line-height: 1.2;
@@ -154,7 +154,7 @@
 	transform: translateY(0);
 	opacity: 1;
 	color: white;
-	transition-delay: 1.7s;
+	transition-delay: 1.3s;
 }
 .img-container .img-box:hover .img,
 .img-container .img-box:hover .img2,
@@ -165,7 +165,7 @@
 .button-wrapper {
 	position: fixed;
 	bottom: -150px;
-	text-align: center;
+	// text-align: center;
 	// @media (max-width: 768px) {
 	// 	left: -5%;
 	// 	top: 100%;
@@ -196,9 +196,9 @@
 	line-height: 60px;
 	transition: all 0.3s ease-out;
   }
-  .button-wrapper .button:nth-child(1):hover .icon{
-	background: #4267B2;
-  }
+//   .button-wrapper .button:nth-child(1):hover .icon{
+// 	background: #4267B2;
+//   }
   .button-wrapper .button:nth-child(2):hover .icon{
 	background: #1DA1F2;
   }
@@ -223,6 +223,9 @@
   .button-wrapper .button:nth-child(9):hover .icon{
 	background: rgb(192, 74, 74);
   }
+  .button-wrapper .button:nth-child(10):hover .icon{
+	background: #4267B2;
+  }
   .button-wrapper .button .icon i{
 	font-size: 25px;
 	line-height: 60px;
@@ -238,9 +241,9 @@
 	margin-left: 10px;
 	transition: all 0.3s ease-out;
   }
-  .button-wrapper .button:nth-child(1) span{
-	color: #4267B2;
-  }
+//   .button-wrapper .button:nth-child(1) span{
+// 	color: #4267B2;
+//   }
   .button-wrapper .button:nth-child(2) span{
 	color: #1DA1F2;
   }
@@ -264,4 +267,7 @@
   }
   .button-wrapper .button:nth-child(9) span{
 	color: rgb(192, 74, 74);
+  }
+  .button-wrapper .button:nth-child(10) span{
+	color: #4267B2;
   }

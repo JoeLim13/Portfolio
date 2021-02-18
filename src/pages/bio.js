@@ -46,7 +46,7 @@ const Bio = ({ imageDetails, image }) => (
               <div className='title'>EAN HAN LIM</div>
               <div className='location'>
                 <span>CLICK</span>
-                <span>ME</span>
+                <span>MY PHOTO</span>
               </div>
             </motion.div>
           </div>
