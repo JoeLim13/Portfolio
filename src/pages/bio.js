@@ -26,8 +26,8 @@ const Bio = ({ imageDetails, image }) => (
                   <ProgressiveImage
                     // src={require("../images/yasmeen.webp")}
                     // placeholder={require("../images/compressed-image.jpg")}
-                    src={require("../images/myphoto.jpg")}
-                    placeholder={require("../images/myphoto2.jpg")}
+                    src={require("../images/myphoto.jpg").default}
+                    placeholder={require("../images/myphoto2.jpg").default}
                   >
                     {(src) => (
                       <motion.img

@@ -127,7 +127,7 @@ const Model = ({ imageDetails }) => {
                   transition={transition}
                 >
                   <motion.img
-                    src={require("../images/myphoto.jpg")}
+                    src={require("../images/myphoto.jpg").default}
                     alt="an image"
                     style={{ scale: scale }}
                     initial={{ scale: 1.1 }}
