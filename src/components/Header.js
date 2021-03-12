@@ -3,13 +3,12 @@ import { withRouter, Link } from "react-router-dom";
 import Hamburger from "./Hamburger";
 
 const Header = ({ history }) => {
-
   // State of our Menu
   const [state, setState] = useState({
     initial: false,
     clicked: null,
     menuName: "Menu",
-    canScroll: true
+    canScroll: true,
   });
   // State of our button
   const [disabled, setDisabled] = useState(false);
@@ -17,7 +16,7 @@ const Header = ({ history }) => {
   if (state.canScroll === false) {
     document.querySelector("body").classList.add("no-scroll");
   } else {
-    document.querySelector("body").classList.remove("no-scroll");   
+    document.querySelector("body").classList.remove("no-scroll");
   }
 
   //Use Effect
@@ -36,19 +35,19 @@ const Header = ({ history }) => {
         initial: null,
         clicked: true,
         menuName: "Close",
-        canScroll: false
+        canScroll: false,
       });
     } else if (state.clicked === true) {
       setState({
         clicked: !state.clicked,
         menuName: "Menu",
-        canScroll: true
+        canScroll: true,
       });
     } else if (state.clicked === false) {
       setState({
         clicked: !state.clicked,
         menuName: "Close",
-        canScroll: false
+        canScroll: false,
       });
     }
   };
@@ -69,11 +68,6 @@ const Header = ({ history }) => {
             <div className="logo">
               <Link to="/">HOMEPAGE</Link>
             </div>
-            <ul class="socials">
-                <li><a href="https://twitter.com/burgs_co" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://github.com/JoeLim13?tab=repositories" target="_blank"><i class="fa fa-github"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/ean-han-lim-61a8b6180/" target="_blank"><i class="fa fa-linkedin-square"></i></a></li>
-            </ul>
             <div className="menu">
               <button disabled={disabled} onClick={handleMenu}>
                 {state.menuName}

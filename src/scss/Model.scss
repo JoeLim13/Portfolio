@@ -1,126 +1,153 @@
 .single {
-	.bio-container {
-		.top-row {
-			height: 50vh;
-			width: 100%;
-			align-items: flex-end;
-			.top {
-				padding-bottom: 40px;
-				.details {
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					.location {
-						span:nth-child(2) {
-							margin-left: 16px;
-						}
-					}
-					.mua {
-						text-transform: uppercase;
-					}
-				}
-				.model {
-					overflow: hidden;
-					.first {
-						margin-right: 72px;
-					}
-					span {
-						display: inline-block;
-						position: relative;
-						font-weight: 400;
-						font-size: 224px;
-						font-family: "Maragsa";
-						// @media (max-width: 1440px) {
-						// 	font-size: 128px;
-						// }
-					}
-				}
-			}
-		}
-		.bottom-row {
-			height: 50vh;
-			position: relative;
-			.bottom {
-				height: 100%;
-				width: 100%;
-				.thumbnail-single {
-					width: 100%;
-					height: 800px;
-					margin: 0 auto;
-					overflow: hidden;
-					position: absolute;
-					left: 0;
-					right: 0;
-					.frame-single {
-						img {
-							position: absolute;
-							width: 100%;
-						}
-					}
-				}
-			}
-			.scroll-for-more {
-				position: absolute;
-				bottom: 200px;
-				left: 200px;
-				z-index: 20;
-				.icon {
-					svg {
-						height: auto;
-						width: 28px;
-					}
-				}
-				.text {
-					margin-top: 8px;
-					color: #ffffff;
-					text-transform: uppercase;
-				}
-			}
-		}
-	}
+  .bio-container {
+    .top-row {
+      height: 40vh;
+      width: 100%;
+      align-items: flex-end;
+      .top {
+        width: 100%;
+        padding-bottom: 40px;
+        .details {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          @media (max-width: 425px) {
+            font-size: 13px;
+            display: flex;
+            flex-direction: column;
+          }
+          .location {
+            span:nth-child(2) {
+              margin-left: 16px;
+            }
+          }
+          .mua {
+            text-transform: uppercase;
+          }
+        }
+        .model {
+          overflow: hidden;
+          @media (max-width: 425px) {
+            text-align: center;
+          }
+          .first {
+            margin-right: 72px;
+            @media (max-width: 425px) {
+              margin-right: 0;
+            }
+          }
+          span {
+            display: inline-block;
+            position: relative;
+            font-weight: 400;
+            font-size: 224px;
+            font-family: "Maragsa";
+            @media (max-width: 1024px) {
+              font-size: 128px;
+            }
+            @media (max-width: 425px) {
+              font-size: 40px;
+            }
+          }
+        }
+      }
+    }
+    .bottom-row {
+      height: 50vh;
+      position: relative;
+      .bottom {
+        height: 100%;
+        width: 100%;
+        .thumbnail-single {
+          width: 100%;
+          height: 800px;
+          margin: 0 auto;
+          overflow: hidden;
+          position: absolute;
+          left: 0;
+          right: 0;
+          .frame-single {
+            img {
+              position: absolute;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .scroll-for-more {
+        position: absolute;
+        bottom: 200px;
+        left: 200px;
+        z-index: 20;
+        .icon {
+          svg {
+            height: auto;
+            width: 28px;
+          }
+        }
+        .text {
+          margin-top: 8px;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
 }
 
 .detailed-information {
-	margin-top: 200px;
-	height: 600px;
-	.bio-container {
-		.row {
-			// @media (max-width: 768px) {
-			// 	width: 770px;
-			// 	margin: 150px;
-			// }
-			justify-content: space-between;
-			align-items: flex-start;
-			h2 {
-				font-size: 28px;
-			}
-			h3 {
-				font-size: 16px;
-				line-height: 28px;
-				font-weight: 400;
-				width: 800px;
-				.button1 :link{
-					display:inline-block;
-					padding:0.35em 1.2em;
-					border:0.1em solid black;
-					margin:0 0.3em 0.3em 0;
-					border-radius:0.12em;
-					text-decoration:none;
-					color:black;
-					text-align: center;
-					transition: all 0.2s;
-					font-weight:500;
-					box-sizing: border-box;
-					&:hover{
-						color:white;
-						background-color:black;
-					}
-					@media all and (max-width:30em){
-						 display:block;
-						 margin:0.4em auto;
-					}
-				}
-			}
-		}
-	}
+  margin-top: 200px;
+  height: 600px;
+  @media (max-width: 425px) {
+    margin-top: 20px;
+  }
+  .bio-container {
+    .row {
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 425px) {
+        display: flex;
+        flex-direction: column;
+      }
+      h2 {
+        font-size: 28px;
+      }
+      h3 {
+        font-size: 16px;
+        line-height: 28px;
+        font-weight: 400;
+        width: 800px;
+        @media (max-width: 425px) {
+          width: 400px;
+        }
+        @media (max-width: 375px) {
+          width: 350px;
+        }
+        @media (max-width: 320px) {
+          width: 300px;
+        }
+        .button1 :link {
+          display: inline-block;
+          padding: 0.35em 1.2em;
+          border: 0.1em solid black;
+          margin: 0 0.3em 0.3em 0;
+          border-radius: 0.12em;
+          text-decoration: none;
+          color: black;
+          text-align: center;
+          transition: all 0.2s;
+          font-weight: 500;
+          box-sizing: border-box;
+          &:hover {
+            color: white;
+            background-color: black;
+          }
+          @media all and (max-width: 30em) {
+             display: block;
+             margin: 0.4em auto;
+          }
+        }
+      }
+    }
+  }
 }

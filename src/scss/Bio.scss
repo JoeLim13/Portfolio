@@ -1,69 +1,69 @@
 .bio-container {
-	flex-grow: 1;
-	margin: 0 auto;
-	padding: 0 32px;
-	position: relative;
-	width: auto;
-	height: 100%;
-	&.fluid {
-		width: 100%;
-		max-width: 100%;
-		padding: 0;
-	}
-	// @media (min-width: 1024px) {
-	// 	max-width: 960px;
-	// }
-	// @media (min-width: 1216px) {
-	// 	max-width: 1152px;
-	// }
-	// @media (min-width: 1408px) {
-	// 	max-width: 1560px;
-	// } 
+  flex-grow: 1;
+  margin: 0 auto;
+  padding: 0 32px;
+  position: relative;
+  width: auto;
+  height: 100%;
+  &.fluid {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+  }
 
-	.row {
-		display: flex;
-		align-items: center;
-		&.space-between {
-			justify-content: space-between;
-		}
-		&.center {
-			justify-content: center;
-		}
-	}
+  .row {
+    display: flex;
+    align-items: center;
+    &.space-between {
+      justify-content: space-between;
+    }
+    &.center {
+      justify-content: center;
+    }
+  }
 }
 
 main {
-	.bio-container {
-		position: relative;
-		.row {
-			height: 100vh;
-			align-items: center;
-			.image-container {
-				position: relative;
-				.thumbnail {
-					overflow: hidden;
-					position: relative;
-					.frame {
-						img {
-							width: 100%;
-						}
-					}
-				}
-				.information {
-					position: absolute;
-					width: 100%;
-					display: flex;
-					align-items: center;
-					justify-content: space-between;
-					margin-top: 20px;
-					text-transform: uppercase;
-					.location {
-						span:nth-child(2) {
-							margin-left: 8px;
-						}
-					}
-				}
-			}
-		}
-	}
+  width: 100vw;
+  .bio-container {
+    position: relative;
+    .row {
+      height: 100vh;
+      align-items: center;
+      .image-container {
+        position: relative;
+        .thumbnail {
+          overflow: hidden;
+          position: relative;
+          .frame {
+            img {
+              width: 100%;
+            }
+          }
+        }
+        .information {
+          //   position: absolute;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-top: 20px;
+          text-transform: uppercase;
+          @media (max-width: 425px) {
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            .title {
+              margin-right: 50px;
+            }
+          }
+          .location {
+            span:nth-child(2) {
+              margin-left: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

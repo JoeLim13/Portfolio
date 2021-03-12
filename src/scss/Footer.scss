@@ -1,0 +1,22 @@
+.socials {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+}
+.socials li {
+  margin: 0 2rem;
+}
+.socials a {
+  text-decoration: none;
+  color: black;
+}
+.socials a i {
+  font-size: 2rem;
+  transition: color 0.4s ease;
+}
+.socials a:hover i {
+  color: aqua;
+}

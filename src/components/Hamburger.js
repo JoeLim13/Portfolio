@@ -10,7 +10,7 @@ import {
   handleHoverExit,
   handleCityReturn,
   handleCity,
-  staggerRevealClose
+  staggerRevealClose,
 } from "./Animations";
 
 import hokkaido from "../images/hokkaido.jpg";
@@ -24,7 +24,7 @@ const cities = [
   { name: "London", image: london },
   { name: "Phuket", image: phuket },
   { name: "San Francisco", image: sanfrancisco },
-  { name: "Barcelona", image: barcelona }
+  { name: "Barcelona", image: barcelona },
 ];
 
 const Hamburger = ({ state }) => {
@@ -57,7 +57,7 @@ const Hamburger = ({ state }) => {
       gsap.to([reveal1, reveal2], {
         duration: 0,
         opacity: 1,
-        height: "100%"
+        height: "100%",
       });
       staggerReveal(reveal1, reveal2);
       fadeInUp(info);
@@ -66,72 +66,79 @@ const Hamburger = ({ state }) => {
   }, [state]);
 
   return (
-    <div ref={el => (menuLayer = el)} className='hamburger-menu'>
+    <div ref={(el) => (menuLayer = el)} className="hamburger-menu">
       <div
-        ref={el => (reveal1 = el)}
-        className='menu-secondary-background-color'></div>
-      <div ref={el => (reveal2 = el)} className='menu-layer'>
+        ref={(el) => (reveal1 = el)}
+        className="menu-secondary-background-color"
+      ></div>
+      <div ref={(el) => (reveal2 = el)} className="menu-layer">
         <div
-          ref={el => (cityBackground = el)}
-          className='menu-city-background'></div>
-        <div className='container'>
-          <div className='wrapper'>
-            <div className='menu-links'>
+          ref={(el) => (cityBackground = el)}
+          className="menu-city-background"
+        ></div>
+        <div className="container">
+          <div className="wrapper">
+            <div className="menu-links">
               <nav>
                 <ul>
                   <li>
                     <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line1 = el)}
-                      to='/bio/me'>
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
+                      ref={(el) => (line1 = el)}
+                      to="/bio/me"
+                    >
                       My Bio
-                    </Link>                
+                    </Link>
                   </li>
                   <li>
                     <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line2 = el)}
-                      to='/experiences'>
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
+                      ref={(el) => (line2 = el)}
+                      to="/experiences"
+                    >
                       Experiences
                     </Link>
                   </li>
                   <li>
                     <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line3 = el)}
-                      to='/projects'>
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
+                      ref={(el) => (line3 = el)}
+                      to="/projects"
+                    >
                       Projects
                     </Link>
                   </li>
                   <li>
                     <Link
-                      onMouseEnter={e => handleHover(e)}
-                      onMouseOut={e => handleHoverExit(e)}
-                      ref={el => (line4 = el)}
-                      to='/contact-me'>
+                      onMouseEnter={(e) => handleHover(e)}
+                      onMouseOut={(e) => handleHoverExit(e)}
+                      ref={(el) => (line4 = el)}
+                      to="/contact-me"
+                    >
                       Contact me
                     </Link>
                   </li>
                 </ul>
               </nav>
-              <div ref={el => (info = el)} className='info'>
+              <div ref={(el) => (info = el)} className="info">
                 <h3>Hey There!</h3>
                 <p>
-                  Welcome to the menu page. Feel free to check the sneak peeks out.
-                  Hover to the places I have been to explore more! 
+                  Welcome to the menu page. Feel free to check the sneak peeks
+                  out. Hover to the places I have been to explore more!
                 </p>
               </div>
-              <div className='locations'>
-                Some places I have been to:
+              <div className="locations">
+                Some places I have been to ("click them!"):
                 {/* Returning the list of cities */}
-                {cities.map(el => (
+                {cities.map((el) => (
                   <span
                     key={el.name}
                     onMouseEnter={() => handleCity(el.image, cityBackground)}
-                    onMouseOut={() => handleCityReturn(cityBackground)}>
+                    onMouseOut={() => handleCityReturn(cityBackground)}
+                  >
                     {el.name}
                   </span>
                 ))}
