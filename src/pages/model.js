@@ -130,7 +130,7 @@ const Model = ({ imageDetails }) => {
                     src={require("../images/myphoto.jpg").default}
                     alt="an image"
                     style={{ scale: scale }}
-                    initial={{ scale: 1.1 }}
+                    initial={{ scale: 1 }}
                     animate={{
                       transition: { delay: 0.2, ...transition },
                       y: window.innerWidth > 1440 ? -50 : -40,
